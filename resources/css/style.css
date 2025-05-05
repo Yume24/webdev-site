@@ -57,16 +57,16 @@ header {
 }
 
 .shadow {
-    text-shadow: 3px 3px black;
+    text-shadow: 0.1875rem 0.1875rem black;
 }
 
 .little-shadow {
-    text-shadow: 1px 1px black;
+    text-shadow: 0.0625rem 0.0625rem black;
 }
 
 .company-name {
     font-size: 1.5rem;
-    word-spacing: -15px;
+    word-spacing: -0.9375rem;
 }
 
 .introduction {
@@ -440,8 +440,5 @@ footer li {
     }
     footer p {
         margin: auto;
-    }
-    #bottom-name {
-        word-spacing: -0.5rem;
     }
 }
