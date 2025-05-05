@@ -1,0 +1,447 @@
+html {
+    font-size: 16px;
+}
+
+@media only screen and (max-width: 1100px) {
+    html {
+        font-size: 15px;
+    }
+}
+
+@media only screen and (max-width: 950px) {
+    html {
+        font-size: 13px;
+    }
+}
+
+@media only screen and (max-width: 520px) {
+    html {
+        font-size: 11px;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    html {
+        font-size: 10px;
+    }
+}
+
+@media only screen and (max-width: 350px) {
+    html {
+        font-size: 8px;
+    }
+}
+
+@keyframes appear {
+    from {top: 5rem; opacity: 0;}
+    to {top: 2.25rem; opacity: 0.95;}
+}
+
+@keyframes appear-text {
+    from {position:relative; top: 2.75rem; opacity: 0;}
+    to {position:relative; top: 0; opacity: 1;}
+}
+
+header {
+    background-image: url("../../background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 75vh;
+    min-height: 500px;
+    border-bottom: 3px solid rgb(109, 109, 109);
+}
+
+.game-font {
+    font-family: "Press Start 2P", "Courier New" !important;
+}
+
+.shadow {
+    text-shadow: 3px 3px black;
+}
+
+.little-shadow {
+    text-shadow: 1px 1px black;
+}
+
+.company-name {
+    font-size: 1.5rem;
+    word-spacing: -15px;
+}
+
+.introduction {
+    margin: 5rem;
+    margin-bottom: 1rem;
+    font-family: "Roboto", "Courier New";
+    text-align: center;
+    font-size: 4rem;
+    font-weight: bold;
+    letter-spacing: 4px;
+    color: rgb(109, 109, 109);
+}
+
+.desc {
+    margin-bottom: 2rem;
+    font-family: "Roboto", "Courier New";
+    text-align: center;
+    font-size: 1.5rem;
+    color: black;
+}
+.navigation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(148, 0, 227);
+    color: white;
+    opacity: 0;
+    margin: auto;
+    width: 80%;
+    max-width: 1200px;
+    border: 3px solid rgb(215, 176, 235);
+    border-radius: 200px;
+    padding: 0.5rem 2rem;
+    position: relative;
+    top: 2.25rem;
+    animation-name: appear;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+    animation-delay: 0.1s;
+}
+
+.navigation .logo {
+    width: 3rem;
+    margin-right: 2rem;
+    margin-left: 1rem;
+}
+
+.navigation ul {
+    margin-left: auto;
+}
+
+.navigation li {
+    display: inline-block;
+    font-size: 1.1rem;
+    margin: 0 1rem;
+    font-family: "Roboto";
+}
+
+.navigation .menu-icon {
+    width: 3rem;
+    display: none;
+    margin: 0 1.5rem;
+}
+
+.navigation a {
+    transition: font-weight 0.3s;
+}
+
+.navigation a:hover {
+    cursor: pointer;
+    font-weight: bold;
+}
+
+@media only screen and (max-width: 800px) {
+
+    .navigation .company-name {
+        display: none;
+    }
+
+    .navigation ul {
+        margin-left: unset;
+    }
+}
+
+@media only screen and (max-width: 495px) {
+    .navigation {
+        justify-content: space-between;
+    }
+    .navigation .logo {
+        display: none;
+    }
+    .navigation ul {
+        display: none;
+    }
+    .navigation .menu-icon {
+        display: inline-block;
+    }
+}
+
+.mission {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    color: white;
+    text-align: center;
+    font-family: "Roboto", "Courier New";
+}
+
+.mission h1 {
+    font-size: 4.5rem;
+    margin: 2rem 4rem;
+    font-weight: bold;
+    opacity: 0;
+    animation-name: appear-text;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+    animation-delay: 0.5s;
+}
+.mission h2 {
+    opacity: 0;
+    font-size: 1.75rem;
+    max-width: 800px;
+    margin: 2rem 4rem;
+    font-weight: 300;
+    animation-name: appear-text;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+    animation-delay: 1s;
+}
+
+@media only screen and (max-width: 1100px) {
+    .mission h1 {
+        font-size: 4rem;
+    }
+    .mission h2 {
+        font-size: 1.5rem;
+    }
+}
+
+@media only screen and (max-width: 950px) {
+    .mission h1 {
+        font-size: 3.5rem;
+    }
+}
+
+.portfolio-products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    align-content: space-around;
+    padding: 50px;
+}
+
+.product {
+    display: flex;
+    flex-direction: column;
+    width: 30rem;
+    height: 30rem;
+    align-items: center;
+    box-shadow: 5px 5px 5px rgb(109, 109, 109);
+    padding: 10px;
+    margin: 10px;
+    transition: box-shadow 0.3s;
+    background-color: rgb(148, 0, 227);
+    color: white;
+    opacity: 0.95;
+    border: 3px solid rgb(215, 176, 235);
+    border-radius: 20px;
+}
+.product h1 {
+    margin: 2.5rem 0;
+    font-size: 2rem;
+    font-weight: 300;
+    text-align: center;
+}
+.product h1, .product h2 {
+    justify-self: center;
+    color: white;
+}
+
+.product h2 {
+    font-family: "Roboto", "Courier New";
+    font-size: 1.25rem;
+    line-height: 1.2;
+    margin: 0 2rem;
+}
+.product:hover {
+    box-shadow: 5px 5px 5px black;
+}
+.product img {
+    transition: transform 0.3s;
+    width: 100%;
+    height: 50%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 15px;
+}
+.product:hover img {
+    transform: scale(1.02);
+}
+
+.team-grid {
+    display: grid;
+    grid-template: repeat(7, 1fr) / 1fr 1fr;
+    margin: auto;
+    gap: 5px;
+    width: 90%;
+    max-width: 1500px;
+    place-content: center center;
+}
+
+.team-member {
+    border: 1px solid black;
+    color: white;
+    background-color: rgb(81, 0, 124);
+    border: 3px solid rgb(215, 176, 235);
+    border-radius: 20px;
+    padding: 50px;
+    margin: 10px;
+    display: grid;
+    grid-template: 1fr 1fr / 1fr 1fr;
+    gap: 10px;
+    place-content: center center;
+    opacity: 0.95;
+}
+
+.team-member h3 {
+    font-size: 1.5rem;
+    line-height: 1.5;
+    grid-area: 1 / 1 / span 1 / span 1;
+}
+.team-member p {
+    font-size: 1.25rem;
+    font-family: "Roboto", "Courier New";
+    grid-area: 2 / 1 / span 1 / span 1;
+    line-height: 1.2;
+}
+.team-member img {
+    max-width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    grid-area: 1 / 2 / span 2 / span 1;
+    border-radius: 15px;
+}
+
+#member1 {
+    grid-row: 1 / span 3;
+    grid-column: 1 / 2;
+}
+
+#member2 {
+    grid-column: 2 / 3;
+    grid-row: 2 / span 3;
+    background-color: rgb(215, 176, 235);
+    text-align: right;
+}
+
+#member2 h3 {
+    grid-area: 1 / 2 / span 1 / span 1;
+}
+
+#member2 p {
+    grid-area: 2 / 2 / span 1 / span 1;
+}
+
+#member2 img {
+    grid-area: 1 / 1 / span 2 / span 1;
+}
+#member3 {
+    grid-column: 1 / 2;
+    grid-row: 4 / span 3;
+    background-color: rgb(215, 176, 235);;
+}
+
+#member4 {
+    grid-column: 2 / 3;
+    grid-row: 5 / span 3;
+    text-align: right;
+}
+#member4 h3 {
+    grid-area: 1 / 2 / span 1 / span 1;
+}
+
+#member4 p {
+    grid-area: 2 / 2 / span 1 / span 1;
+}
+
+#member4 img {
+    grid-area: 1 / 1 / span 2 / span 1;
+}
+
+@media only screen and (max-width: 1400px) {
+    .team-member img {
+        display: none;
+    }
+    .team-member h3 {
+        grid-area: 1 / 1 / span 1 / span 2 !important;
+        text-align: center;
+    }
+    .team-member p {
+        grid-area: 2 / 1 / span 1 / span 2 !important;
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    .team-grid {
+        grid-template: repeat(4, 1fr) / 1fr;
+    }
+    .team-member {
+        padding: 15px;
+    }
+    #member1 {
+        grid-area: unset;
+    }
+    #member2 {
+        grid-area: unset;
+    }
+    #member3 {
+        grid-area: unset;
+        background-color: rgb(81, 0, 124);
+    }
+    #member4 {
+        grid-area: unset;
+        background-color: rgb(215, 176, 235);;
+    }
+}
+#contact {
+    margin: 0 3rem;
+    margin-bottom: 4rem;
+}
+#contact p {
+    line-height: 1.5;
+    font-size: 1.25rem;
+}
+
+footer div {
+    height: 5rem;
+    background-color: rgb(148, 0, 227);
+    opacity: 0.95;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+footer p {
+    font-size: 1rem !important;
+    margin: 10px;
+}
+footer ul {
+    margin-left: auto;
+}
+
+footer li {
+    display: inline-block;
+    font-size: 1.1rem;
+    margin: 0 1rem;
+    font-family: "Roboto";
+}
+
+@media only screen and (max-width: 450px) {
+    footer ul {
+        display: none;
+    }
+    footer p {
+        margin: auto;
+    }
+    #bottom-name {
+        word-spacing: -0.5rem;
+    }
+}
